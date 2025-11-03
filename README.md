@@ -1,6 +1,6 @@
 # 📱 ApklisCompanion SDK
 
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://developer.android.com/about/versions/lollipop?hl=es-419)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 > Una librería Android simple y poderosa para verificar compras y licencias en Apklis y ApklisCompanion usando Kotlin.

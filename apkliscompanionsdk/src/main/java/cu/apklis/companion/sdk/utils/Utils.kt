@@ -219,6 +219,7 @@ object Utils {
         val isAppInstalled = isAppInstalled(context, APKLIS_COMPANION_APP_ID)
         if (isAppInstalled) {
             intent.setPackage(APKLIS_COMPANION_APP_ID)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
         return try {
             context.startActivity(intent)
@@ -234,6 +235,7 @@ object Utils {
         val isAppInstalled = isAppInstalled(context, APKLIS_APP_ID)
         if (isAppInstalled) {
             intent.setPackage(APKLIS_APP_ID)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
         return try {
             context.startActivity(intent)
