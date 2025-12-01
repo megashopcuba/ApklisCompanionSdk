@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">ApklisCompanion Test App</string>
+    <string name="app_name">ApKuba Test App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
 
     <string name="test">Comprobar</string>
-    <string name="package_id">Id de la App Ej: cu.apklis.companion</string>
+    <string name="package_id">Id de la App Ej: cu.apkuba</string>
     <string name="public_pem_key">Llave publica PEM</string>
     <string name="buy">Comprar</string>
     <string name="error_field_required">Este campo es necesario</string>

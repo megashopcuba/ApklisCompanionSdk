@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "cu.apklis.companion.test",
+  "applicationId": "cu.apkuba.test",
   "variantName": "release",
   "elements": [
     {

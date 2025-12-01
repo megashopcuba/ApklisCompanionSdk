@@ -1,4 +1,4 @@
-package cu.apklis.companion.test
+package cu.apkuba.test
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import cu.apklis.companion.test.databinding.FragmentTestBinding
+import cu.apkuba.test.databinding.FragmentTestBinding
 
 
 /**
@@ -49,7 +49,7 @@ class TestFragment : Fragment() {
 
             return when (position) {
 
-                0 -> ApklisCompanionFragment()
+                0 -> ApKubaFragment()
                 else -> ApklisFragment()
             }
         }
@@ -68,7 +68,7 @@ class TestFragment : Fragment() {
             binding.tabLayout, binding.viewPager
         ) { tab, position ->
             when (position) {
-                0 -> tab.text = "Apklis Companion"
+                0 -> tab.text = "ApKuba"
                 else -> tab.text = "Apklis"
             }
 

@@ -1,4 +1,4 @@
-package cu.apklis.companion.test
+package cu.apkuba.test
 
 import android.os.Bundle
 import android.view.Menu
@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import com.google.android.material.snackbar.Snackbar
-import cu.apklis.companion.test.databinding.ActivityMainBinding
+import cu.apkuba.test.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

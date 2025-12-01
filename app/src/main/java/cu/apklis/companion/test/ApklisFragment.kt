@@ -1,4 +1,4 @@
-package cu.apklis.companion.test
+package cu.apkuba.test
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import cu.apklis.companion.sdk.core.Apklis
-import cu.apklis.companion.sdk.utils.Utils
-import cu.apklis.companion.test.databinding.FragmentApklisBinding
+import cu.apkuba.sdk.core.Apklis
+import cu.apkuba.sdk.utils.Utils
+import cu.apkuba.test.databinding.FragmentApklisBinding
 import kotlinx.coroutines.launch
 
 /**

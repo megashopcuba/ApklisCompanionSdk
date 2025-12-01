@@ -1,5 +1,5 @@
 [versions]
-agp = "8.13.0"
+agp = "8.13.1"
 kotlin = "2.2.20"
 coreKtx = "1.17.0"
 junit = "4.13.2"
@@ -11,7 +11,13 @@ material = "1.13.0"
 constraintlayout = "2.2.1"
 navigationFragmentKtx = "2.9.5"
 navigationUiKtx = "2.9.5"
-apklisCompanionSdk = "1.0.3"
+apKubaSdk = "1.0.3"
+okhttp = "5.3.0"
+okhttpTls = "5.3.0"
+gson = "2.13.2"
+codeScanner = "2.3.2"
+core = "3.5.3"
+apklislicensevalidator = "v.1.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,6 +30,13 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-tls = { module = "com.squareup.okhttp3:okhttp-tls", version.ref = "okhttpTls" }
+code-scanner = { module = "com.github.yuriy-budiyev:code-scanner", version.ref = "codeScanner" }
+core = { module = "com.google.zxing:core", version.ref = "core" }
+javase = { module = "com.google.zxing:javase", version.ref = "core" }
+apklislicensevalidator = { module = "com.github.z17-cuba:ApklisLicenseValidator", version.ref = "apklislicensevalidator" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -1,4 +1,4 @@
-package cu.apklis.companion.test
+package cu.apkuba.test
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,14 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import cu.apklis.companion.sdk.core.ApklisCompanion
-import cu.apklis.companion.sdk.utils.Utils
-import cu.apklis.companion.test.databinding.FragmentApkliscompanionBinding
+import cu.apkuba.sdk.core.ApKuba
+import cu.apkuba.sdk.utils.Utils
+import cu.apkuba.test.databinding.FragmentApkliscompanionBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class ApklisCompanionFragment : Fragment() {
+class ApKubaFragment : Fragment() {
 
     private var _binding: FragmentApkliscompanionBinding? = null
 
@@ -59,7 +59,7 @@ class ApklisCompanionFragment : Fragment() {
                     focusView?.requestFocus()
                 } else {
 
-                    val result = ApklisCompanion.isPurchased(requireContext(), packageId)
+                    val result = ApKuba.isPurchased(requireContext(), packageId)
                     MaterialAlertDialogBuilder(requireContext())
                         .setIcon(R.drawable.info_24px)
                         .setTitle(getString(R.string.result))
@@ -72,7 +72,7 @@ class ApklisCompanionFragment : Fragment() {
                         }
 
                         .show()
-                    Log.i("ApklisCompanionFragment", "Result: ${result}")
+                    Log.i("ApKubaFragment", "Result: ${result}")
                 }
 
             }
@@ -95,7 +95,7 @@ class ApklisCompanionFragment : Fragment() {
                 if (cancel) {
                     focusView?.requestFocus()
                 } else {
-                    Utils.openApklisCompanionLink(requireContext(), packageId)
+                    Utils.openApKubaLink(requireContext(), packageId)
                 }
             }
 
@@ -145,7 +145,7 @@ class ApklisCompanionFragment : Fragment() {
                 if (cancel) {
                     focusView?.requestFocus()
                 } else {
-                    Utils.openApklisCompanionLicenseLink(requireContext(), packageId, licenseUuid, pemKey)
+                    Utils.openApKubaLicenseLink(requireContext(), packageId, licenseUuid, pemKey)
 
                 }
             }
@@ -169,7 +169,7 @@ class ApklisCompanionFragment : Fragment() {
                 if (cancel) {
                     focusView?.requestFocus()
                 } else {
-                    val result = ApklisCompanion.isLicensePurchased(requireContext(), packageId)
+                    val result = ApKuba.isLicensePurchased(requireContext(), packageId)
                     MaterialAlertDialogBuilder(requireContext())
                         .setIcon(R.drawable.info_24px)
                         .setTitle(getString(R.string.result))
@@ -182,7 +182,7 @@ class ApklisCompanionFragment : Fragment() {
                         }
 
                         .show()
-                    Log.i("ApklisCompanionFragment", "Result: $result")
+                    Log.i("ApKubaFragment", "Result: $result")
                 }
             }
         }

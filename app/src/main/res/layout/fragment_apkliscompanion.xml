@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ApklisCompanionFragment">
+    tools:context=".ApKubaFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Prueba validación de compra de ApklisCompanion"
+                    android:text="Prueba validación de compra de ApKuba"
                     android:textAlignment="center"
                     android:textSize="20sp" />
 
@@ -99,7 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Prueba validación de licencias de ApklisCompanion"
+                    android:text="Prueba validación de licencias de ApKuba"
                     android:textAlignment="center"
                     android:textSize="20sp" />
 

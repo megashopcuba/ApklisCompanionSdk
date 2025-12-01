@@ -1,4 +1,4 @@
-package cu.apklis.companion.test
+package cu.apkuba.test
 
 import org.junit.Test
 

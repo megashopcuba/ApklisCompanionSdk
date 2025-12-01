@@ -1,19 +1,19 @@
-# 📱 ApklisCompanion SDK
+# 📱 ApKuba SDK
 
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://developer.android.com/about/versions/lollipop?hl=es-419)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> Una librería Android simple y poderosa para verificar compras y licencias en Apklis y ApklisCompanion usando Kotlin.
+> Una librería Android simple y poderosa para verificar compras y licencias en Apklis y ApKuba usando Kotlin.
 
 ## 🤔 ¿Qué es esto?
 
-**ApklisCompanion SDK te permite verificar si un usuario ha comprado tu aplicación o licencia en las tiendas cubanas Apklis y ApklisCompanion. Es como un "detector de compras" que te ayuda a proteger tu app de la piratería.**
+**ApKuba SDK te permite verificar si un usuario ha comprado tu aplicación o licencia en las tiendas cubanas Apklis y ApKuba. Es como un "detector de compras" que te ayuda a proteger tu app de la piratería.**
 
-### 🏪 ¿Qué son Apklis y ApklisCompanion?
+### 🏪 ¿Qué son Apklis y ApKuba?
 
 **Apklis**: La tienda oficial de aplicaciones de Cuba
 
-**ApklisCompanion**: Una versión mejorada que incluye sistema de licencias
+**ApKuba**: Una versión mejorada que incluye sistema de licencias
 
 ### ✨ Características
 
@@ -65,7 +65,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.virtualShopRest:ApklisCompanionSdk:LATEST_VERSION")
+    implementation("com.github.virtualShopRest:ApKubaSdk:LATEST_VERSION")
 }
 ```
 
@@ -73,7 +73,7 @@ dependencies {
 
 ```kotlin
 dependencies {
-    implementation 'com.github.virtualShopRest:ApklisCompanionSdk:LATEST_VERSION'
+    implementation 'com.github.virtualShopRest:ApKubaSdk:LATEST_VERSION'
 }
 ```
 
@@ -81,17 +81,17 @@ dependencies {
 
 ### Útima versión
 
-[![](https://jitpack.io/v/virtualShopRest/ApklisCompanionSdk.svg)](https://jitpack.io/#virtualShopRest/ApklisCompanionSdk)
+[![](https://jitpack.io/v/virtualShopRest/ApKubaSdk.svg)](https://jitpack.io/#virtualShopRest/ApKubaSdk)
 
 ## 🚀 Uso Básico
 
 ### 🛒 Verificar si una app fue comprada
 
-#### Con ApklisCompanion (Recomendado)
+#### Con ApKuba (Recomendado)
 
 ```kotlin
 // Verificar compra de forma síncrona
-val result = ApklisCompanion.isPurchased(context, "com.miapp.ejemplo")
+val result = ApKuba.isPurchased(context, "com.miapp.ejemplo")
 if (result.isValid()) {
     // ¡El usuario pagó por la app! 🎉
     println("Usuario: ${result.userName}")
@@ -117,10 +117,10 @@ lifecycleScope.launch {
 }
 ```
 
-### 📄 Verificar licencias (Solo ApklisCompanion)
+### 📄 Verificar licencias (Solo ApKuba)
 
 ```kotlin
-val licenseResult = ApklisCompanion.isLicensePurchased(context, "com.miapp.ejemplo")
+val licenseResult = ApKuba.isLicensePurchased(context, "com.miapp.ejemplo")
 if (licenseResult.isValid()) {
     println("Licencia válida hasta: ${licenseResult.expiredIn}")
     // Activar funciones premium
@@ -136,8 +136,8 @@ if (licenseResult.isValid()) {
 
 ```kotlin
 
-// En ApklisCompanion
-Utils.openApklisCompanionLink(context, "com.miapp.ejemplo")
+// En ApKuba
+Utils.openApKubaLink(context, "com.miapp.ejemplo")
 
 // En Apklis tradicional
 Utils.openApklisLink(context, "com.miapp.ejemplo")
@@ -146,7 +146,7 @@ Utils.openApklisLink(context, "com.miapp.ejemplo")
 #### Comprar licencia
 
 ```kotlin
-Utils.openApklisCompanionLicenseLink(
+Utils.openApKubaLicenseLink(
     context = context,
     applicationId = "com.miapp.ejemplo",
     licenseUuid = "tu-uuid-de-licencia",
@@ -168,7 +168,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkPurchaseStatus() {
-        val result = ApklisCompanion.isPurchased(this, packageName)
+        val result = ApKuba.isPurchased(this, packageName)
 
         when {
             result.isValid() -> {
@@ -192,7 +192,7 @@ class MainActivity : AppCompatActivity() {
             .setTitle("Comprar App")
             .setMessage("¿Deseas comprar la versión completa?")
             .setPositiveButton("Comprar") { _, _ ->
-                Utils.openApklisCompanionLink(this, packageName)
+                Utils.openApKubaLink(this, packageName)
             }
             .setNegativeButton("Cancelar", null)
             .show()
@@ -206,7 +206,7 @@ class MainActivity : AppCompatActivity() {
 class LicenseManager(private val context: Context) {
 
     fun checkLicense(): LicenseResult {
-        val response = ApklisCompanion.isLicensePurchased(context, context.packageName)
+        val response = ApKuba.isLicensePurchased(context, context.packageName)
 
         return when (response.status) {
             LicenseStatus.PAYED -> LicenseResult.Valid(response.expiredIn)
@@ -272,7 +272,7 @@ val isValidPEM = Utils.validatePublicKeyPEM(pemKey) // true/false
 
 - Kotlin (la librería está escrita en Kotlin)
 
-- Apklis o ApklisCompanion instalado en el dispositivo
+- Apklis o ApKuba instalado en el dispositivo
 
 ## 🤝 Contribuir
 
@@ -298,13 +298,13 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](https://opens
 
 💬 Telegram: [@vs_helper](https://t.me/vs_helper)
 
-🐛 Issues: [GitHub Issues](https://github.com/virtualShopRest/ApklisCompanionSdk/issues)
+🐛 Issues: [GitHub Issues](https://github.com/virtualShopRest/ApKubaSdk/issues)
 
-📱 Aplicación de prueba: [Descargar](https://github.com/virtualShopRest/ApklisCompanionSdk/blob/master/app/release/app-release.apk)
+📱 Aplicación de prueba: [Descargar](https://github.com/virtualShopRest/ApKubaSdk/blob/master/app/release/app-release.apk)
 
-📖 Wiki: [Documentación completa](https://deepwiki.com/virtualShopRest/ApklisCompanionSdk) 
+📖 Wiki: [Documentación completa](https://deepwiki.com/virtualShopRest/ApKubaSdk) 
 
-[![Preguntar DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/virtualShopRest/ApklisCompanionSdk)
+[![Preguntar DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/virtualShopRest/ApKubaSdk)
 
 
 

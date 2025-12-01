@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/testFragment"
-        android:name="cu.apklis.companion.test.TestFragment"
+        android:name="cu.apkuba.test.TestFragment"
         android:label="fragment_test"
         tools:layout="@layout/fragment_test" />
 </navigation>

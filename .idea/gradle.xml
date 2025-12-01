@@ -10,7 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/apkliscompanionsdk" />
+            <option value="$PROJECT_DIR$/apkubasdk" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

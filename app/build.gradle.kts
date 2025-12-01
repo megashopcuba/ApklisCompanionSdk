@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "cu.apklis.companion.test"
+    namespace = "cu.apkuba.test"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "cu.apklis.companion.test"
+        applicationId = "cu.apkuba.test"
         minSdk = 21
         targetSdk = 36
         versionCode = 1
@@ -46,7 +46,7 @@ android {
 
 dependencies {
 // Usar la librería local
-    implementation(project(":apkliscompanionsdk"))
+    implementation(project(":apkubasdk"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

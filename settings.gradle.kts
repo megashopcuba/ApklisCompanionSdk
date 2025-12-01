@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ApklisCompanion Test App"
+rootProject.name = "ApKuba Test App"
 include(":app")
-include(":apkliscompanionsdk")
+include(":apkubasdk")
